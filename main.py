@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def evaluate():
   if request.method == "GET":
-    search_query = 'when+was+the+constitution+of+the+united+states+signed'
+    search_query = request.args.get("search_query")
     url = 'https://google.com/search?q=' + search_query
     result = requests.get(url)
     soup = bs4.BeautifulSoup(result.text, "html.parser")
