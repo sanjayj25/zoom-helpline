@@ -11,7 +11,7 @@ def evaluate():
     url = 'https://google.com/search?q=' + search_query
     result = requests.get(url)
     soup = bs4.BeautifulSoup(result.text, "html.parser")
-    print(soup)
+    answer = soup.find("div", class_="BNeawe").text
     return str(soup)
 
 if __name__ == '__main__':
