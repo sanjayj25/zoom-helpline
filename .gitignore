@@ -1,4 +1,5 @@
-client_service_key.json
+speech_to_text_key.json
+text_to_speech_key.json
 
 # Object file
 *.o
